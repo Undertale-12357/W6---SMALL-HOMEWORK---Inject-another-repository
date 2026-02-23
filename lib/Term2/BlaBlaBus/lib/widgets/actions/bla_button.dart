@@ -8,7 +8,7 @@ class BlaButton extends StatelessWidget {
 
   const BlaButton({
     super.key,
-    required this.icon,
+    this.icon,
     required this.label,
     required this.color,
   });
@@ -16,8 +16,8 @@ class BlaButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return ElevatedButton.icon(
-      style: ElevatedButton.styleFrom(
+    return OutlinedButton.icon(
+      style: OutlinedButton.styleFrom(
         backgroundColor: color == BlaColors.primary
             ? BlaColors.backGroundColor
             : BlaColors.white,
